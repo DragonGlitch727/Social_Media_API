@@ -1,5 +1,9 @@
 package com.promineotech.SocialMediaApi.repository;
 
-public interface CommentRepository {
+import org.springframework.data.repository.CrudRepository;
+
+import com.promineotech.SocialMediaApi.entity.Comment;
+
+public interface CommentRepository extends CrudRepository<Comment, Long>  {
 
 }

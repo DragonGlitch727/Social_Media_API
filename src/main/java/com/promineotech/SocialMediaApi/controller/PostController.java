@@ -39,7 +39,7 @@ public class PostController {
 	}
 	
 	@RequestMapping(method=RequestMethod.POST)
-	public ResponseEntity<Object> createPost(@RequestBody Post post, @PathVariable Long postId) {
+	public ResponseEntity<Object> createPost(@RequestBody Post post, @PathVariable Long userId) {
 		try {
 			return new ResponseEntity<Object>(service.createPost(post, userId), HttpStatus.OK);
 		} catch (Exception e) {
